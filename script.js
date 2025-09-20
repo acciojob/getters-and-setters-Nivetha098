@@ -21,7 +21,7 @@ void study(){
 
 class Teacher extends Person {
 	void teach(){
-	console.log(`${name} is studying`)
+	console.log(`${name} is teaching`)
 	}
 }
 const person = new Person("John",23);
