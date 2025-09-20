@@ -1,45 +1,40 @@
+//complete this code
 class Person {
-    constructor(name, age) {
-        this._name = name; // Use _name to avoid confusion with the getter
-        this._age = age;   // Use _age to avoid confusion with the setter
-    }
-
-    get name() {
-        return this._name; // Access the private variable
-    }
-
-    set age(value) {
-        this._age = value; // Set the private variable
-    }
-
-    get age() {
-        return this._age; // Added getter for age
-    }
+	constructor(name,age){
+		this._name= name;
+		this.age =age;
+	}
+	get name(){
+		return this._name;
+	}
+	set age(value){
+		this._age = value;
+	}
 }
 
 class Student extends Person {
-    study() {
-        console.log(`${this.name} is studying`); // Use this.name
-    }
+ study(){
+	console.log(`${this._name} is studying`);
 }
-
+	
+}
 const student = new Student("Alice", 22);
-student.study(); // This will correctly log "Alice is studying"
+student.study();
 
 class Teacher extends Person {
-    teach() {
-        console.log(`${this.name} is teaching`); // Use this.name
-    }
+	 teach(){
+	console.log(`${this._name} is teaching`)
+	}
 }
+const person = new Person("John",23);
+console.log(person.name);
+person.age=30;
+console.log(person.age);
 
-const person = new Person("John", 23);
-console.log(person.name); // This will log "John"
-person.age = 30; // Using the setter to change the age
-console.log(person.age); // This will log 30
 
-const teacher = new Teacher("Bob", 40);
-teacher.teach(); // This will correctly log "Bob is teaching"
 
+const teacher = new Teacher("bob",40);
+teacher.teach();
 // Do not change the code below this line
 window.Person = Person;
 window.Student = Student;
