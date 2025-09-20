@@ -5,22 +5,24 @@ class Person {
 		this.age =age;
 	}
 	get name(){
-		return name;
+		return this.name;
 	}
-	set age(){
-		this.age = age;
+	set age(value){
+		this.age = valye;
 	}
 }
 
 class Student extends Person {
-void study(){
-	console.log(`${name} is studying`)
+ study(){
+	console.log(`${name} is studying`);
 }
 	
 }
+const student = new Student("Alice", 22);
+student.study();
 
 class Teacher extends Person {
-	void teach(){
+	 teach(){
 	console.log(`${name} is teaching`)
 	}
 }
